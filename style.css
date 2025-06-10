@@ -1082,3 +1082,71 @@ body {
   text-align: center;
   margin-top: 1.5rem;
 }
+.ticket-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .ticket-info {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .ticket-info th, .ticket-info td {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .ticket-info th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+      width: 25%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .badge-pagado {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .badge-anulado {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .table th, .table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .table tfoot td {
+      background-color: #f9f9f9;
+      font-weight: bold;
+      border-top: 2px solid #ccc;
+    }

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
     const messageDiv = document.getElementById('loginMessage');
 
-    // 🔥 Usuarios quemados
+ 
     const users = [
         { username: 'admin1', password: 'admin123', role: 'admin' },
         { username: 'mesero1', password: 'mesero123', role: 'mesero' },
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = usernameInput.value.trim();
         const password = passwordInput.value.trim();
 
-        // Buscar usuario
+
         const userFound = users.find(user =>
             user.username === username &&
             user.password === password
         );
 
         if (userFound) {
-            // Usuario válido -> Mostrar mensaje y redirigir según el rol
+
             messageDiv.textContent = `Bienvenido ${userFound.username} (${userFound.role}). Redirigiendo...`;
             messageDiv.style.color = 'green';
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 1000);
         } else {
-            // Usuario no válido
+
             messageDiv.textContent = 'Usuario o contraseña incorrectos. Intenta de nuevo.';
             messageDiv.style.color = 'red';
         }
@@ -61,11 +61,11 @@ function mostrarPago(comandaId, total) {
       const metodo = document.getElementById('metodoPago').value;
       const comanda = document.getElementById('comandaSeleccionada').innerText;
       alert(`✅ Comanda #${comanda} pagada con método: ${metodo.toUpperCase()}\nSe generará el Ticket.`);
-      // Aquí podrías redirigir a detalleTicket.html por ejemplo:
+
       window.location.href = '../SeccionesMostrar/detalleTicket.html';
     }
 
-    // detalleTicket.js - funciones del Detalle de Ticket
+
 
 function imprimirTicket() {
   window.print();
@@ -75,11 +75,10 @@ function verificarUsuario() {
   const usuario = document.getElementById('usuario').value;
   const pin = document.getElementById('pin').value;
 
-  // Simulación de validación (reemplazar luego con backend)
   if (usuario === "ana" && pin === "1234") {
     alert("✅ Usuario verificado. Redirigiendo a ingreso de monto inicial...");
     
-    // REDIRECCIONAMOS a montoInicial.html
+
     window.location.href = '../Principales/montoInicial.html';
     
   } else {
