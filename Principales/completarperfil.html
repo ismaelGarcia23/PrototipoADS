@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios - Bosko Hostal</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">🏨 Bosko Hostal</div>
+             <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/usuario.html" class="active">Usuarios</a>
+        <a href="../SeccionesMostrar/mostrarUsuario.html" class="active">Mostrar Lista </a>
+
+      </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Gestión de Usuarios</h1>
+
+            <section>
+
+                <form class="form grid-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana López" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documento">Documento (DUI/NIT)</label>
+                        <input type="text" id="documento" name="documento" placeholder="12345678-9" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="7777-8888" />
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="direccion">Dirección</label>
+                        <textarea id="direccion" name="direccion" placeholder="Dirección completa"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rol">Rol</label>
+                        <select id="rol" name="rol">
+                            <option>Administrador</option>
+                            <option>Mesero</option>
+                            <option>Cajero</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="activo" checked /> Usuario activo</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avatar">Avatar</label>
+                        <input type="file" id="avatar" name="avatar" />
+                    </div>
+
+                    <div class="form-actions full-width">
+                        <button type="button" class="btn">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </section>
+
+
+        </main>
+    </div>
+</body>
+
+</html>

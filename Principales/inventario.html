@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario - Registrar Movimiento</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+     <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/inventario.html"  class="active">Inventario</a>
+        <a href="../SeccionesMostrar/mostrarInventario.html">Lista de Inventario</a>
+    </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Registrar Movimiento de Inventario</h2>
+
+      <form class="form grid-form">
+        <div class="form-group full-width">
+          <label for="producto">Producto</label>
+          <select id="producto" name="producto">
+            <option>Producto 1</option>
+            <option>Producto 2</option>
+            <option>Producto 3</option>
+          </select>
+        </div>
+
+        <div class="form-group small">
+          <label for="tipo">Tipo de Movimiento</label>
+          <select id="tipo" name="tipo">
+            <option value="INGRESO">Ingreso</option>
+            <option value="SALIDA">Salida</option>
+          </select>
+        </div>
+
+        <div class="form-group small">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" />
+        </div>
+
+        <div class="form-group medium">
+          <label for="referencia">Referencia (opcional)</label>
+          <input type="text" id="referencia" name="referencia" />
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="button" class="btn">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar Movimiento</button>
+        </div>
+      </form>
+
+    </main>
+  </div>
+</body>
+
+</html>

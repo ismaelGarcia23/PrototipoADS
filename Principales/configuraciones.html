@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/configuraciones.html" class="active">Configuración</a>
+      </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Configuración del Sistema</h2>
+
+    <!-- Sección Empresa -->
+    <div class="config-section">
+      <h3>Datos de Empresa</h3>
+      <form>
+        <div class="form-group">
+          <label for="empresa_nombre">Nombre</label>
+          <input type="text" id="empresa_nombre" name="empresa_nombre" placeholder="Ej. Bosko Hostal">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_nit">NIT</label>
+          <input type="text" id="empresa_nit" name="empresa_nit">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_direccion">Dirección</label>
+          <textarea id="empresa_direccion" name="empresa_direccion"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_telefono">Teléfono</label>
+          <input type="text" id="empresa_telefono" name="empresa_telefono">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_email">Email</label>
+          <input type="email" id="empresa_email" name="empresa_email">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_logo">Logo (URL)</label>
+          <input type="text" id="empresa_logo" name="empresa_logo">
+        </div>
+
+        <div class="form-group">
+          <label for="empresa_datos_fiscales">Datos Fiscales</label>
+          <textarea id="empresa_datos_fiscales" name="empresa_datos_fiscales"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sección General -->
+    <div class="config-section">
+      <h3>Configuración General</h3>
+      <form>
+        <div class="form-group">
+          <label><input type="checkbox" id="propina_activa"> Propina Activa</label>
+        </div>
+
+        <div class="form-group">
+          <label><input type="checkbox" id="seleccion_multiple"> Selección Múltiple</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sección Ticket -->
+    <div class="config-section">
+      <h3>Configuración de Ticket</h3>
+
+      <table class="table-config">
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mostrar_logo</td>
+            <td>true</td>
+            <td>
+              <a class="badge-accion" href="#">Editar</a>
+              <a class="badge-accion" href="#">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>leyenda_footer</td>
+            <td>¡Gracias por su compra!</td>
+            <td>
+              <a class="badge-accion" href="#">Editar</a>
+              <a class="badge-accion" href="#">Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-primary">Agregar Campo</button>
+      </div>
+    </div>
+
+    <!-- Sección Impresora -->
+    <div class="config-section">
+      <h3>Configuración de Impresora</h3>
+      <form>
+        <div class="form-group">
+          <label for="impresora_nombre">Nombre</label>
+          <input type="text" id="impresora_nombre" name="impresora_nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="impresora_comando">Comando ESC/POS</label>
+          <textarea id="impresora_comando" name="impresora_comando"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+
+    <a href="index.html" class="btn" style="margin-top: 2rem; display:inline-block;">Volver al inicio</a>
+  </main>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+
+</html>

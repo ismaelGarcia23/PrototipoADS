@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platos - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+          <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/platos.html" class="active">Platos</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <div class="form-header">
+          <h2>Registrar Nuevo Plato</h2>
+          <a href="../SeccionesMostrar/mostrarPlatos.html" class="btn-link">Mostrar Lista</a>
+        </div>
+
+        <form class="form compact-form">
+          <div class="row">
+            <div class="form-group small">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" />
+            </div>
+            <div class="form-group small">
+              <label for="precio">Precio</label>
+              <input type="number" id="precio" name="precio" step="0.01" />
+            </div>
+            <div class="form-group medium">
+              <label for="categoria">Categoría</label>
+              <select id="categoria" name="categoria">
+                <option>Desayuno</option>
+                <option>Almuerzo</option>
+                <option>Cena</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group medium">
+              <label for="descripcion">Descripción</label>
+              <input type="text" id="descripcion" name="descripcion" />
+            </div>
+            <div class="form-group small">
+              <label for="imagen">Imagen</label>
+              <input type="file" id="imagen" name="imagen" />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Ingredientes</label>
+            <div class="ingrediente-row">
+              <select name="ingrediente[]">
+                <option>Huevo</option>
+                <option>Frijoles</option>
+                <option>Plátano</option>
+              </select>
+              <input type="number" name="cantidad[]" placeholder="Cantidad" min="1" />
+            </div>
+            <div class="ingrediente-row">
+              <select name="ingrediente[]">
+                <option>Huevo</option>
+                <option>Frijoles</option>
+                <option>Plátano</option>
+              </select>
+              <input type="number" name="cantidad[]" placeholder="Cantidad" min="1" />
+            </div>
+            <a class="btn-link small">+ Agregar ingrediente</a>
+          </div>
+
+          <div class="form-actions full-width">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-ccp">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesero - Comandas</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🍽️ Bosko Hostal - Mesero</div>
+     <nav class="nav">
+        <a href="../mesero-index.html">Menu</a>
+        <a href="./seccionesMesero/mesero-comandas.html" class="-active">Crear Comanda</a>
+        <a href="../seccionesMesero/Mostrar-mesero-comandas.html" class="-active">Ver Comanda</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Registrar Nueva Comanda</h2>
+
+      <form class="form grid-form">
+        <div class="form-group small">
+          <label for="mesa">Mesa</label>
+          <select id="mesa" name="mesa">
+            <option>Mesa 1</option>
+            <option>Mesa 2</option>
+            <option>Mesa 3</option>
+            <option>Mesa 4</option>
+          </select>
+        </div>
+
+        <div class="form-group small">
+          <label for="area">Área</label>
+          <select id="area" name="area">
+            <option>Salón</option>
+            <option>Terraza</option>
+            <option>Bar</option>
+          </select>
+        </div>
+
+        <div class="form-group small">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option>Pendiente</option>
+            <option>Preparación</option>
+            <option>Entregada</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Platos / Productos</label>
+
+          <!-- Puedes repetir estas filas con JS luego -->
+          <div class="ingrediente-row">
+            <select name="item[]">
+              <option>Pizza Margarita</option>
+              <option>Desayuno Ranchero</option>
+              <option>Hamburguesa Bosko</option>
+              <option>Ensalada César</option>
+            </select>
+            <input type="number" name="cantidad[]" placeholder="Cantidad" min="1" />
+          </div>
+
+          <div class="ingrediente-row">
+            <select name="item[]">
+              <option>Fanta Lata</option>
+              <option>Agua</option>
+              <option>Cerveza</option>
+            </select>
+            <input type="number" name="cantidad[]" placeholder="Cantidad" min="1" />
+          </div>
+
+          <a class="btn-link small">+ Agregar plato o producto</a>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="button" class="btn">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar Comanda</button>
+        </div>
+      </form>
+
+
+    </main>
+  </div>
+</body>
+
+</html>

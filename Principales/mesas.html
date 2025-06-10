@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Mesa - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style-mesas-areas.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+          <nav class="nav">
+        <a href="../admin-index.html" >Menu</a>
+        <a href="./Principales/comanda.html" class="active">Comandas</a>
+
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <h2>Registrar Mesa</h2>
+        <form class="form grid-form">
+          <div class="form-group">
+            <label for="numero_mesa">Número de Mesa</label>
+            <input type="text" id="numero_mesa" name="numero_mesa">
+          </div>
+          <div class="form-group">
+            <label for="area_mesa">Área</label>
+            <select id="area_mesa" name="area_mesa">
+              <option>Salón</option>
+              <option>Terraza</option>
+              <option>VIP</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="estado_mesa">Estado</label>
+            <select id="estado_mesa" name="estado_mesa">
+              <option>Libre</option>
+              <option>Ocupada</option>
+              <option>Reservada</option>
+            </select>
+          </div>
+          <div class="form-actions full-width">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="mostrarMesas.html" class="btn">Cancelar</a>
+          </div>
+        </form>
+      </section>
+      <div style="margin-top: 2rem;">
+          <a href="../SeccionesMostrar/mostrarMesa.html" class="btn">Ver Mesas</a>
+        </div>
+    </main>
+  </div>
+</body>
+</html>

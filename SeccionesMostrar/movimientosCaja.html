@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movimientos de Caja - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .filter-group input,
+    .filter-group select {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+      <a href="index.html">Dashboard</a>
+      <a href="caja.html">Caja</a>
+      <a href="mostrarMovimientosCaja.html" class="active">Movimientos Caja</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Movimientos de Caja</h2>
+
+    <!-- Filtros -->
+    <div class="filter-group">
+      <div>
+        <label for="fecha_inicio">Fecha Inicio</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio">
+      </div>
+
+      <div>
+        <label for="fecha_fin">Fecha Fin</label>
+        <input type="date" id="fecha_fin" name="fecha_fin">
+      </div>
+
+      <div>
+        <label for="tipo_movimiento">Tipo de Movimiento</label>
+        <select id="tipo_movimiento" name="tipo_movimiento">
+          <option value="">Todos</option>
+          <option value="INGRESO">INGRESO</option>
+          <option value="EGRESO">EGRESO</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tabla de Movimientos -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Fecha / Hora</th>
+          <th>Tipo</th>
+          <th>Monto</th>
+          <th>Descripción</th>
+          <th>Turno</th>
+          <th>Usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-06-09 09:00</td>
+          <td>INGRESO</td>
+          <td>$50.00</td>
+          <td>Pago comanda #123</td>
+          <td>Turno #1</td>
+          <td>Ana López</td>
+        </tr>
+
+        <tr>
+          <td>2025-06-09 10:15</td>
+          <td>EGRESO</td>
+          <td>$20.00</td>
+          <td>Pago de insumos</td>
+          <td>Turno #1</td>
+          <td>Ana López</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="index.html" class="btn" style="margin-top: 2rem; display:inline-block;">Volver al Dashboard</a>
+  </main>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+
+</html>

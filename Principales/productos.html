@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+           <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/productos.html" class="active">Productos</a>
+
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section>
+
+            <section>
+        <div class="form-header nav-toolbar">
+          <h2>Crear Producto</h2>
+          <div class="toolbar-links">
+            <a href="../SeccionesMostrar/mostrarCatalogos.html" class="btn-toolbar">Mas Opciones</a>
+            <a href="../SeccionesMostrar/mostrarProductos.html" class="btn-toolbar">Ver Producto</a>
+          </div>
+        </div>
+    </section>
+
+        <form class="form grid-form">
+          <div class="form-group">
+            <label for="nombre">Nombre del producto</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Teclado Gamer" />
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <select id="categoria" name="categoria">
+              <option>Periféricos</option>
+              <option>Bebidas</option>
+              <option>Alimentos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <select id="marca" name="marca">
+              <option>Logitech</option>
+              <option>HP</option>
+              <option>Genérica</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" name="precio" placeholder="0.00" step="0.01" />
+          </div>
+
+          <div class="form-group">
+            <label for="stock">Stock actual</label>
+            <input type="number" id="stock" name="stock" placeholder="0" />
+          </div>
+
+          <div class="form-group">
+            <label for="imagen">Imagen</label>
+            <input type="file" id="imagen" name="imagen" />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" placeholder="Descripción del producto..."></textarea>
+          </div>
+
+          <div class="form-actions full-width">
+            <button type="button" class="btn">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </form>
+      </section>
+
+     
+    </main>
+  </div>
+</body>
+</html>

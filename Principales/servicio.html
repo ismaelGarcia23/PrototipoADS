@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Áreas y Mesas - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+            <nav class="nav">
+        <a href="../admin-index.html" class="active">Menu</a>
+        <a href="./Principales/usuario.html">Usuarios</a>
+        <a href="./Principales/productos.html">Productos</a>
+        <a href="./Principales/platos.html">Platos</a>
+        <a href="./Principales/comanda.html">Comandas</a>
+        <a href="./Principales/inventario.html">Inventario</a>
+        <a href="./Principales/caja.html">Caja</a>
+        <a href="./Principales/reservas.html">Reservas</a>
+        <a href="./Principales/promociones.html">Promociones</a>
+        <a href="./Principales/configuracion.html">Configuración</a>
+        <a href="./Principales/auditoria.html">Auditoría</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- Registro de Área -->
+      <section style="margin-bottom: 3rem;">
+        <div class="form-header">
+          <h2>Registrar Área de Servicio</h2>
+        </div>
+        <form class="form compact-form">
+          <div class="row">
+            <div class="form-group small">
+              <label for="nombre_area">Nombre del Área</label>
+              <input type="text" id="nombre_area" name="nombre_area" placeholder="Ej. Salón, Terraza" />
+            </div>
+
+            <div class="form-group actions">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="button" class="btn">Cancelar</button>
+            </div>
+          </div>
+        </form>
+
+        <h3>Lista de Áreas</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Salón</td>
+              <td>
+                <span class="badge accion">Editar</span>
+                <span class="badge accion">Eliminar</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Terraza</td>
+              <td>
+                <span class="badge accion">Editar</span>
+                <span class="badge accion">Eliminar</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Registro de Mesas -->
+      <section>
+        <div class="form-header">
+          <h2>Registrar Mesa</h2>
+        </div>
+        <form class="form compact-form">
+          <div class="row">
+            <div class="form-group small">
+              <label for="numero_mesa">Número de Mesa</label>
+              <input type="text" id="numero_mesa" name="numero_mesa" placeholder="Ej. Mesa 5" />
+            </div>
+            <div class="form-group small">
+              <label for="area_mesa">Área</label>
+              <select id="area_mesa" name="area_mesa">
+                <option>Salón</option>
+                <option>Terraza</option>
+              </select>
+            </div>
+
+            <div class="form-group actions">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="button" class="btn">Cancelar</button>
+            </div>
+          </div>
+        </form>
+
+        <h3>Lista de Mesas</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Área</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mesa 1</td>
+              <td>Salón</td>
+              <td>
+                <span class="badge accion">Editar</span>
+                <span class="badge accion">Eliminar</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Mesa 2</td>
+              <td>Terraza</td>
+              <td>
+                <span class="badge accion">Editar</span>
+                <span class="badge accion">Eliminar</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

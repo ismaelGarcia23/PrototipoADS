@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesero - Comandas</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🍽️ Bosko Hostal - Mesero</div>
+     <nav class="nav">
+        <a href="../mesero-index.html">Menu</a>
+        <a href="./seccionesMesero/mesero-comandas.html" class="-active">Crear Comanda</a>
+        <a href="../SeccionesMostrar/mostrarComanda.html" class="-active">Ver Comanda</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+     
+      <h3>Comandas Recientes</h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Mesa</th>
+            <th>Área</th>
+            <th>Estado</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#101</td>
+            <td>Mesa 2</td>
+            <td>Salón</td>
+            <td><span class="badge estado">Preparación</span></td>
+            <td>$25.00</td>
+            <td>
+              <a href="#" class="badge badge-detalle">Ver Detalle</a>
+              <a href="#" class="badge badge-editar">Editar</a>
+              <a href="#" class="badge badge-eliminar">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#102</td>
+            <td>Mesa 4</td>
+            <td>Terraza</td>
+            <td><span class="badge estado">Pendiente</span></td>
+            <td>$18.50</td>
+            <td>
+              <a href="#" class="badge badge-detalle">Ver Detalle</a>
+              <a href="#" class="badge badge-editar">Editar</a>
+              <a href="#" class="badge badge-eliminar">Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+  </div>
+</body>
+
+</html>

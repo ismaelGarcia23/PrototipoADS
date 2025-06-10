@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comandas - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+      <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/comandas.html"  class="active">Comandas</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+
+      <section style="margin-top: 3rem;">
+        <h2>Lista de Comandas</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Fecha</th>
+              <th>Mesa</th>
+              <th>Mesero</th>
+              <th>Área</th>
+              <th>Estado</th>
+              <th>Total</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>2025-05-28 08:45</td>
+              <td>Mesa 1</td>
+              <td>Ana</td>
+              <td>Salón</td>
+              <td><span class="badge estado">Pendiente</span></td>
+              <td>$12.50</td>
+              <td>
+                <a href="../Principales/editarComanda.html" class="badge badge-editar">Editar</a>
+                <a href="#" class="badge badge-eliminar">Eliminar</a>
+                <a href="../SeccionesMostrar/mostrarDetalleComanda.html" class="badge badge-detalle">Ver detalle</a>
+              </td>
+
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>2025-05-28 09:15</td>
+              <td>Mesa 2</td>
+              <td>José</td>
+              <td>Terraza</td>
+              <td><span class="badge estado">Entregada</span></td>
+              <td>$8.00</td>
+              <td>
+                <a href="../Principales/editarComanda.html" class="badge badge-editar">Editar</a>
+                <a href="#" class="badge badge-eliminar">Eliminar</a>
+                <a href="../SeccionesMostrar/mostrarDetalleComanda.html" class="badge badge-detalle">Ver detalle</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

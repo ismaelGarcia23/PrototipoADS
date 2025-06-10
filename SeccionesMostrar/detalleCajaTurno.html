@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Turno de Caja - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+      <a href="../admin-index.html">Menu</a>
+      <a href="../Principales/caja.html">Caja</a>
+      <a href="../SeccionesMostrar/movimientosCaja.html">Movimientos Caja</a>
+      <a href="../SeccionesMostrar/detalleCajaTurno.html" class="active">Detalle Caja</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Detalle de Turno de Caja</h2>
+
+    <table class="table">
+      <tr>
+        <th>Fecha de Apertura</th>
+        <td>2025-06-09 08:30</td>
+      </tr>
+      <tr>
+        <th>Fecha de Cierre</th>
+        <td>2025-06-09 18:00</td>
+      </tr>
+      <tr>
+        <th>Cajero</th>
+        <td>Ana López</td>
+      </tr>
+      <tr>
+        <th>Monto Inicial</th>
+        <td>$100.00</td>
+      </tr>
+      <tr>
+        <th>Monto Final</th>
+        <td>$320.50</td>
+      </tr>
+    </table>
+
+    <h3>Movimientos del Turno</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Fecha / Hora</th>
+          <th>Tipo</th>
+          <th>Monto</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-06-09 09:00</td>
+          <td>INGRESO</td>
+          <td>$50.00</td>
+          <td>Pago comanda #123</td>
+        </tr>
+
+        <tr>
+          <td>2025-06-09 10:15</td>
+          <td>EGRESO</td>
+          <td>$20.00</td>
+          <td>Pago de insumos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="mostrarMovimientosCaja.html" class="btn" style="margin-top: 2rem; display:inline-block;">Volver a Movimientos</a>
+  </main>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+
+</html>

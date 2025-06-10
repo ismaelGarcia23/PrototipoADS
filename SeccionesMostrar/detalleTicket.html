@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Ticket - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .ticket-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .ticket-info {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .ticket-info th, .ticket-info td {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .ticket-info th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+      width: 25%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .badge-pagado {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .badge-anulado {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .table th, .table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .table tfoot td {
+      background-color: #f9f9f9;
+      font-weight: bold;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+      <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/caja.html" class="active">Caja</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="ticket-header">
+        <h2>Detalle de Ticket</h2>
+      </div>
+
+      <table class="ticket-info">
+        <tr>
+          <th>Ticket</th>
+          <td>#001</td>
+        </tr>
+        <tr>
+          <th>Fecha</th>
+          <td>2025-06-06 10:10</td>
+        </tr>
+        <tr>
+          <th>Mesa</th>
+          <td>Mesa 3</td>
+        </tr>
+        <tr>
+          <th>Cajero</th>
+          <td>Ana López</td>
+        </tr>
+        <tr>
+          <th>Estado</th>
+          <td><span class="badge badge-pagado">Pagado</span></td>
+        </tr>
+      </table>
+
+      <h3>Items</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pizza Margarita</td>
+            <td>2</td>
+            <td>$5.00</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Fanta</td>
+            <td>1</td>
+            <td>$1.00</td>
+            <td>$1.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" style="text-align:right">Total:</td>
+            <td>$11.00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+     
+    </main>
+  </div>
+
+  <script src="../scripts.js"></script>
+</body>
+
+</html>

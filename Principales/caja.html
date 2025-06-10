@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+      <a href="../admin-index.html">Menu</a>
+      <a href="../Principales/caja.html" class="active">Caja</a>
+      <a href="../SeccionesMostrar/movimientosCaja.html">Movimientos Caja</a>
+      <a href="../SeccionesMostrar/detalleCajaTurno.html">Detalle Caja</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Caja - Turno Actual</h2>
+
+    <!-- Si HAY caja abierta -->
+    <div class="turno-caja">
+      <h3>Caja Abierta</h3>
+      <p><strong>Fecha de apertura:</strong> 2025-06-09 08:30</p>
+      <p><strong>Cajero:</strong> Ana López</p>
+      <p><strong>Monto inicial:</strong> $<span id="montoInicialCaja">0.00</span></p>
+      <p><strong>Monto en caja actual:</strong> $156.50</p>
+
+      <div class="form-actions">
+        <button type="button" class="btn">Registrar Movimiento Manual</button>
+        <button type="button" class="btn btn-primary">Cerrar Caja</button>
+      </div>
+    </div>
+
+    <!-- Comandas pendientes -->
+    <h3>Comandas Pendientes de Pago</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Comanda</th>
+          <th>Mesa</th>
+          <th>Área</th>
+          <th>Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#123</td>
+          <td>Mesa 3</td>
+          <td>Terraza</td>
+          <td>$11.00</td>
+          <td>
+            <button onclick="mostrarPago('123', '11.00')" class="btn btn-primary">Pagar</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>#124</td>
+          <td>Mesa 2</td>
+          <td>Salón</td>
+          <td>$15.50</td>
+          <td>
+            <button onclick="mostrarPago('124', '15.50')" class="btn btn-primary">Pagar</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <!-- Formulario de pago -->
+    <div id="pagoSection" class="pago-form" style="display:none; margin-top:2rem;">
+      <h3>Pagar Comanda #<span id="comandaSeleccionada"></span></h3>
+      <p><strong>Total a pagar:</strong> $<span id="totalPagar"></span></p>
+
+      <label for="metodoPago">Método de Pago</label>
+      <select id="metodoPago">
+        <option value="efectivo">Efectivo</option>
+        <option value="tarjeta_credito">Tarjeta de Crédito</option>
+        <option value="tarjeta_debito">Tarjeta de Débito</option>
+        <option value="transferencia">Transferencia Bancaria</option>
+        <option value="qr">QR / Wallet</option>
+      </select>
+
+      <button class="btn-pagar" onclick="confirmarPago()">Confirmar Pago</button>
+    </div>
+
+    <a href="../admin-index.html" class="btn" style="margin-top: 2rem; display:inline-block;">Volver al inicio</a>
+  </main>
+</div>
+
+<script>
+function mostrarPago(comandaId, total) {
+  document.getElementById('pagoSection').style.display = 'block';
+  document.getElementById('comandaSeleccionada').innerText = comandaId;
+  document.getElementById('totalPagar').innerText = total;
+}
+
+function confirmarPago() {
+  const metodo = document.getElementById('metodoPago').value;
+  const comanda = document.getElementById('comandaSeleccionada').innerText;
+  alert(`✅ Comanda #${comanda} pagada con método: ${metodo.toUpperCase()}\nSe generará el Ticket y movimiento en caja.`);
+  window.location.href = '../SeccionesMostrar/detalleTicket.html';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const montoInicial = params.get('monto') || '0.00';
+
+  document.getElementById('montoInicialCaja').textContent = parseFloat(montoInicial).toFixed(2);
+});
+</script>
+
+</body>
+
+</html>

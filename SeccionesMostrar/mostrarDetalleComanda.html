@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comandas - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+     <nav class="nav">
+        <a href="index.html" class="active">Menu</a>
+        <a href="./Principales/usuario.html">Usuarios</a>
+        <a href="./Principales/productos.html">Productos</a>
+        <a href="./Principales/platos.html">Platos</a>
+        <a href="./Principales/comandas.html">Comandas</a>
+        <a href="./Principales/tickets.html">Tickets</a>
+        <a href="./Principales/inventario.html">Inventario</a>
+        <a href="./Principales/caja.html">Caja</a>
+        <a href="./Principales/reservas.html">Reservas</a>
+        <a href="./Principales/promociones.html">Promociones</a>
+        <a href="./Principales/configuracion.html">Configuración</a>
+        <a href="./Principales/auditoria.html">Auditoría</a>
+      </nav>
+    </aside>
+
+    
+    <main class="main-content">
+      <section>
+        <div class="form-header">
+          <h2>Detalle de Comanda</h2>
+        </div>
+
+        <table class="comanda-info-table">
+          <tr>
+            <th></th>
+            <td>#123</td>
+          </tr>
+          <tr>
+            <th>Fecha</th>
+            <td>2025-06-03</td>
+          </tr>
+          <tr>
+            <th>Mesa</th>
+            <td>Mesa 3</td>
+          </tr>
+          <tr>
+            <th>Área</th>
+            <td>Terraza</td>
+          </tr>
+          <tr>
+            <th>Mesero</th>
+            <td>José Martínez</td>
+          </tr>
+          <tr>
+            <th>Estado</th>
+            <td>Pendiente</td>
+          </tr>
+        </table>
+
+        <h3>Items</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pizza Margarita</td>
+              <td>2</td>
+              <td>$5.00</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Fanta</td>
+              <td>1</td>
+              <td>$1.00</td>
+              <td>$1.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="text-align:right">Total:</td>
+              <td>$11.00</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div style="margin-top: 2rem;">
+          <a href="mostrarComanda.html" class="btn">Volver a la Lista</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

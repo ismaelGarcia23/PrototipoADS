@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Usuario</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+
+<body>
+    <div class="login-page-wrapper">
+        <div class="login-container">
+            <h1 style="text-align: center;">Inicia Sesion</h1>
+            <form class="login-form" id="loginForm">
+                <h2> Bosko Hostal</h2>
+                <div class="input-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" id="loginButton">Entrar</button>
+
+                <!-- Mensaje visual -->
+                <div id="loginMessage" style="margin-top: 1rem; font-weight: bold;"></div>
+            </form>
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

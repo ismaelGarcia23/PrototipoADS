@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+      <a href="../admin-index.html">Menu</a>
+      <a href="../Principales/caja.html" class="active">Caja</a>
+      <a href="../SeccionesMostrar/movimientosCaja.html">Movimientos Caja</a>
+      <a href="../SeccionesMostrar/detalleCajaTurno.html">Detalle Caja</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Caja - Turno Actual</h2>
+
+    <!-- Si NO hay caja abierta -->
+    <div class="apertura-caja">
+      <h3>Apertura de Caja</h3>
+      <form>
+        <div class="form-group">
+          <label for="monto_inicial">Monto inicial ($):</label>
+          <input type="number" id="monto_inicial" name="monto_inicial" min="0" step="0.01">
+        </div>
+
+        <div class="form-actions">
+          <button type="button" onclick="confirmarMontoInicial()" class="btn btn-primary">Confirmar Monto Inicial</button>
+
+        </div>
+      </form>
+    </div>
+
+</div>
+
+    <script src="../scripts.js"></script>
+</body>
+
+</html>

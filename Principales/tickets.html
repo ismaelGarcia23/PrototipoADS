@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Área de Servicio - Bosko Hostal</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">🏨 Bosko Hostal</div>
+                <nav class="nav">
+        <a href="../admin-index.html" class="active">Menu</a>
+        <a href="./Principales/usuario.html">Usuarios</a>
+        <a href="./Principales/productos.html">Productos</a>
+        <a href="./Principales/platos.html">Platos</a>
+        <a href="./Principales/comanda.html">Comandas</a>
+        <a href="./Principales/inventario.html">Inventario</a>
+        <a href="./Principales/caja.html">Caja</a>
+        <a href="./Principales/reservas.html">Reservas</a>
+        <a href="./Principales/promociones.html">Promociones</a>
+        <a href="./Principales/configuracion.html">Configuración</a>
+        <a href="./Principales/auditoria.html">Auditoría</a>
+      </nav>
+        </aside>
+
+        <main class="main-content">
+            <section>
+                <h2>Registrar Ticket</h2>
+                <form class="form grid-form">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="datetime-local" id="fecha" name="fecha" value="2025-06-06T09:00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comanda">Comanda</label>
+                        <select id="comanda" name="comanda">
+                            <option>#123 - Mesa 3 - $11.00</option>
+                            <option>#124 - Mesa 2 - $15.50</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cajero">Cajero</label>
+                        <select id="cajero" name="cajero">
+                            <option>Ana López</option>
+                            <option>José Martínez</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option>Pagado</option>
+                            <option>Anulado</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total">Total</label>
+                        <input type="text" id="total" name="total" placeholder="$0.00">
+                    </div>
+
+                    <div class="form-actions full-width">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a href="mostrarTickets.html" class="btn">Cancelar</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

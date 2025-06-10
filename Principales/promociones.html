@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Promoción - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+      <nav class="nav">
+        <a href="../admin-index.html">Dashboard</a>
+        <a href="../Principales/promociones.html" class="active">Registrar Promoción</a>
+        <a href="../SeccionesMostrar/mostrarPromociones.html">Mostrar Promociones</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Registrar Nueva Promoción</h2>
+      <form class="form grid-form">
+        <div class="form-group full-width">
+          <label for="nombre">Nombre de la Promoción</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. 2x1 en Pizzas">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" name="descripcion" placeholder="Detalles de la promoción"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_inicio">Fecha de Inicio</label>
+          <input type="date" id="fecha_inicio" name="fecha_inicio">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_fin">Fecha de Fin</label>
+          <input type="date" id="fecha_fin" name="fecha_fin">
+        </div>
+
+        <h3>Productos / Platos en Promoción</h3>
+
+        <div class="form-group full-width">
+          <label for="item">Agregar Producto o Plato</label>
+          <select id="item" name="item">
+            <option>Pizza Margarita (Plato)</option>
+            <option>Fanta Lata (Producto)</option>
+            <option>Hamburguesa Clásica (Plato)</option>
+          </select>
+          <button type="button" class="btn" style="margin-top: 0.5rem;">+ Agregar a la promoción</button>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a href="mostrarPromociones.html" class="btn btn-ccp">Cancelar</a>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

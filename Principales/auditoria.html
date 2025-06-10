@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoría - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="logo">🏨 Bosko Hostal</div>
+     <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/auditoria.html" class="active">Auditoría</a>
+      </nav>
+  </aside>
+
+  <main class="main-content">
+    <h2>Auditoría del Sistema</h2>
+
+    <!-- Filtros -->
+    <div class="filter-group">
+      <div>
+        <label for="fecha_inicio">Fecha Inicio</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio">
+      </div>
+
+      <div>
+        <label for="fecha_fin">Fecha Fin</label>
+        <input type="date" id="fecha_fin" name="fecha_fin">
+      </div>
+
+      <div>
+        <label for="usuario">Usuario</label>
+        <select id="usuario" name="usuario">
+          <option value="">Todos</option>
+          <option value="1">Ana López</option>
+          <option value="2">José Martínez</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="accion">Acción</label>
+        <select id="accion" name="accion">
+          <option value="">Todas</option>
+          <option value="alta">Alta</option>
+          <option value="edicion">Edición</option>
+          <option value="eliminacion">Eliminación</option>
+          <option value="login">Login</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tabla de Auditoría -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Fecha / Hora</th>
+          <th>Usuario</th>
+          <th>Acción</th>
+          <th>Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-06-08 10:15</td>
+          <td>Ana López</td>
+          <td>Alta</td>
+          <td>Producto "Pizza Margarita" creado</td>
+        </tr>
+
+        <tr>
+          <td>2025-06-08 11:00</td>
+          <td>José Martínez</td>
+          <td>Edición</td>
+          <td>Reserva #002 actualizada (cambio de estado a Confirmada)</td>
+        </tr>
+
+        <tr>
+          <td>2025-06-08 12:30</td>
+          <td>Ana López</td>
+          <td>Login</td>
+          <td>Inicio de sesión exitoso</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <a href="index.html" class="btn" style="margin-top: 2rem; display:inline-block;">Volver al Dashboard</a>
+  </main>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+
+</html>

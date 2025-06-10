@@ -1,0 +1,69 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Reserva - Bosko Hostal</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal</div>
+    <nav class="nav">
+        <a href="../admin-index.html">Menu</a>
+        <a href="./Principales/reservas.html"  class="active">Reservas</a>
+        <a href="../SeccionesMostrar/mostrarReserva.html">Mostrar Reservas</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Registrar Nueva Reserva</h2>
+      <form class="form grid-form">
+        <div class="form-group full-width">
+          <label for="cliente_nombre">Nombre del Cliente</label>
+          <input type="text" id="cliente_nombre" name="cliente_nombre" placeholder="Ej. Juan Pérez">
+        </div>
+
+        <div class="form-group">
+          <label for="mesa">Mesa</label>
+          <select id="mesa" name="mesa">
+            <option>Mesa 1</option>
+            <option>Mesa 2</option>
+            <option>Mesa 3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_hora">Fecha y Hora</label>
+          <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+        </div>
+
+        <div class="form-group">
+          <label for="personas">Cantidad de Personas</label>
+          <input type="number" id="personas" name="personas" min="1" placeholder="Ej. 2">
+        </div>
+
+        <div class="form-group">
+          <label for="estado_reserva">Estado de Reserva</label>
+          <select id="estado_reserva" name="estado_reserva">
+            <option>Pendiente</option>
+            <option>Confirmada</option>
+            <option>Cancelada</option>
+            <option>Completada</option>
+          </select>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a href="mostrarReservas.html" class="btn">Cancelar</a>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear Usuario - Administrador</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal - Administrador</div>
+      <nav class="nav">
+        <a href="admin-index.html">Menu</a>
+        <a href="crear-usuario.html" class="active">Crear Usuario</a>
+        <a href="gestionar-usuario.html">Gestionar Usuarios</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Crear Usuario</h2>
+
+      <!-- Paso 1: Registrar Usuario Básico -->
+      <div id="step1">
+        <h3>Datos Básicos del Usuario</h3>
+        <form id="formUsuarioBasico">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="goToStep2()">Siguiente</button>
+        </form>
+      </div>
+
+      <!-- Paso 2: Seleccionar Rol -->
+      <div id="step2" style="display: none;">
+        <h3>Selecciona el Rol del Usuario</h3>
+        <form id="formRol">
+          <div class="form-group">
+            <label for="rol">Rol</label>
+            <select id="rol" name="rol">
+              <option value="admin">Administrador</option>
+              <option value="mesero">Mesero</option>
+              <option value="cocinero">Cocinero</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="goToStep3()">Siguiente</button>
+        </form>
+      </div>
+
+      <!-- Paso 3: Completar Perfil o Dejar para Más Tarde -->
+      <div id="step3" style="display: none;">
+        <h3>¿Quieres completar el perfil ahora?</h3>
+        <p>Se te pedirá más información como nombre, teléfono, dirección, etc.</p>
+
+        <button type="button" class="btn btn-primary" onclick="completeProfile()">Completar Perfil</button>
+        <button type="button" class="btn btn-secondary" onclick="skipProfile()">Dejar para Más Tarde</button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Paso 1 -> Paso 2
+    function goToStep2() {
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+    }
+
+    // Paso 2 -> Paso 3
+    function goToStep3() {
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step3').style.display = 'block';
+    }
+
+    // Si elige completar el perfil
+    function completeProfile() {
+      alert('Formulario de perfil completo');
+      // Aquí podrías redirigir a otra página o mostrar el formulario de perfil
+      window.location.href = '../Principales/completar-perfil.html'; // Esto es solo un ejemplo.
+    }
+
+    // Si elige dejar el perfil para después
+    function skipProfile() {
+      alert('Usuario creado, puedes completar el perfil más tarde.');
+      // Redirigir a la vista donde se ve la lista de usuarios o a donde quieras
+      window.location.href = '../admin-index.html'; // Corrigiendo las comillas adicionales
+    }
+  </script>
+
+</body>
+
+</html>

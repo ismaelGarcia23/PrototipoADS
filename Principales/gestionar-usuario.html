@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestionar Usuarios - Administrador</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏨 Bosko Hostal - Administrador</div>
+      <nav class="nav">
+        <a href="admin-index.html">Menu</a>
+        <a href="./usuario.html ">Crear Usuario</a>
+        <a href="gestionar-usuarios.html" class="active">Gestionar Usuarios</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Gestionar Usuarios</h2>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-container">
+        <input type="text" id="searchUser" placeholder="Buscar usuario..." />
+        <button class="btn btn-primary" onclick="searchUser()">Buscar</button>
+      </div>
+
+      <!-- Lista de usuarios -->
+      <h3>Lista de Usuarios</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="userList">
+          <tr>
+            <td>ana123</td>
+            <td>ana@example.com</td>
+            <td>Administrador</td>
+            <td>
+              <a href="editar-usuario.html" class="badge badge-editar">Editar</a>
+              <a href="#" class="badge badge-eliminar" onclick="deleteUser(1)">Eliminar</a>
+              <a href="detalle-usuario.html" class="badge badge-detalle">Ver Detalles</a>
+            </td>
+          </tr>
+          <tr>
+            <td>jose456</td>
+            <td>jose@example.com</td>
+            <td>Mesero</td>
+            <td>
+              <a href="editar-usuario.html" class="badge badge-editar">Editar</a>
+              <a href="#" class="badge badge-eliminar" onclick="deleteUser(2)">Eliminar</a>
+              <a href="detalle-usuario.html" class="badge badge-detalle">Ver Detalles</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script>
+    // Función para buscar usuarios
+    function searchUser() {
+      const searchQuery = document.getElementById('searchUser').value.toLowerCase();
+      const rows = document.getElementById('userList').getElementsByTagName('tr');
+
+      for (let i = 0; i < rows.length; i++) {
+        const username = rows[i].getElementsByTagName('td')[0].textContent.toLowerCase();
+        const email = rows[i].getElementsByTagName('td')[1].textContent.toLowerCase();
+
+        if (username.includes(searchQuery) || email.includes(searchQuery)) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+
+    // Función para eliminar un usuario
+    function deleteUser(userId) {
+      // Aquí podrías agregar la lógica para eliminar el usuario de la base de datos
+      alert(`Usuario ${userId} eliminado`);
+    }
+  </script>
+</body>
+
+</html>
